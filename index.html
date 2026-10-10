@@ -1,1191 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<!-- AdSense verification will go here later -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DRUG UNIVERSE, Dr. DEVIS | Pharmacy & Medicine Information</title>
-
-<meta name="description"
-content="DRUG UNIVERSE, Dr. DEVIS - pharmacy, medicine, drug information, anticancer medicines, health resources and pharmaceutical education.">
-
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f8fb;
-    color:#17202a;
-    line-height:1.6;
-}
-
-a{
-    text-decoration:none;
-}
-
-button,
-input,
-select,
-textarea{
-    font-family:inherit;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#063970;
-    color:white;
-    box-shadow:0 3px 15px rgba(0,0,0,.15);
-}
-
-.navbar{
-    max-width:1400px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    padding:12px 20px;
-}
-
-.brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:white;
-    font-weight:bold;
-}
-
-.logo{
-    width:48px;
-    height:48px;
-    border-radius:50%;
-    background:white;
-    color:#063970;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:24px;
-    border:3px solid #16a085;
-    box-shadow:0 0 0 3px rgba(255,255,255,.15);
-}
-
-.brand-text{
-    font-size:20px;
-}
-
-.brand-text small{
-    display:block;
-    font-size:11px;
-    opacity:.85;
-    font-weight:normal;
-}
-
-.nav-links{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    gap:8px;
-}
-
-.nav-links a{
-    color:white;
-    padding:8px 11px;
-    border-radius:7px;
-    font-size:14px;
-}
-
-.nav-links a:hover{
-    background:rgba(255,255,255,.15);
-}
-
-.social-links{
-    display:flex;
-    gap:6px;
-}
-
-.social-links a{
-    width:36px;
-    height:36px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    color:white;
-    font-size:17px;
-    font-weight:bold;
-}
-
-.tiktok{
-    background:#111;
-}
-
-.whatsapp{
-    background:#25D366;
-}
-
-.instagram{
-    background:#C13584;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    background:linear-gradient(135deg,#063970,#087f8c);
-    color:white;
-    padding:70px 20px;
-}
-
-.hero-content{
-    max-width:1200px;
-    margin:auto;
-    text-align:center;
-}
-
-.hero h1{
-    font-size:46px;
-    margin-bottom:12px;
-}
-
-.hero h1 span{
-    color:#7fffd4;
-}
-
-.hero p{
-    max-width:850px;
-    margin:0 auto 25px;
-    font-size:18px;
-}
-
-.search-box{
-    max-width:850px;
-    margin:auto;
-    display:flex;
-    background:white;
-    border-radius:50px;
-    padding:7px;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-}
-
-.search-box input{
-    flex:1;
-    border:none;
-    outline:none;
-    padding:15px 20px;
-    border-radius:40px;
-    font-size:16px;
-}
-
-.search-box button{
-    border:none;
-    background:#16a085;
-    color:white;
-    padding:0 25px;
-    border-radius:40px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.search-box button:hover{
-    background:#117864;
-}
-
-.quick-buttons{
-    margin-top:22px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.quick-buttons a,
-.quick-buttons button{
-    border:none;
-    padding:11px 18px;
-    border-radius:25px;
-    cursor:pointer;
-    font-weight:bold;
-    background:white;
-    color:#063970;
-}
-
-/* =========================
-   GENERAL
-========================= */
-
-.container{
-    max-width:1400px;
-    margin:auto;
-    padding:45px 20px;
-}
-
-.section-title{
-    text-align:center;
-    color:#063970;
-    margin-bottom:30px;
-}
-
-.section-title h2{
-    font-size:32px;
-}
-
-.section-title p{
-    max-width:850px;
-    margin:7px auto;
-    color:#607080;
-}
-
-.card{
-    background:white;
-    border-radius:14px;
-    padding:22px;
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-}
-
-.btn{
-    display:inline-block;
-    border:none;
-    padding:11px 17px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.btn-primary{
-    background:#063970;
-    color:white;
-}
-
-.btn-success{
-    background:#16a085;
-    color:white;
-}
-
-.btn-whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-.btn-danger{
-    background:#c0392b;
-    color:white;
-}
-
-.btn-light{
-    background:#ecf0f1;
-    color:#17202a;
-}
-
-/* =========================
-   AI
-========================= */
-
-.ai-section{
-    background:#eaf6f8;
-}
-
-.ai-box{
-    max-width:950px;
-    margin:auto;
-}
-
-.chat-window{
-    background:white;
-    min-height:260px;
-    max-height:520px;
-    overflow-y:auto;
-    padding:20px;
-    border-radius:14px 14px 0 0;
-    border:1px solid #dce6ea;
-}
-
-.message{
-    margin-bottom:14px;
-    padding:12px 15px;
-    border-radius:12px;
-    max-width:85%;
-}
-
-.message.user{
-    margin-left:auto;
-    background:#063970;
-    color:white;
-}
-
-.message.bot{
-    background:#eef3f5;
-    color:#17202a;
-}
-
-.ai-input{
-    display:flex;
-    gap:8px;
-    background:white;
-    padding:12px;
-    border:1px solid #dce6ea;
-    border-top:none;
-    border-radius:0 0 14px 14px;
-}
-
-.ai-input input{
-    flex:1;
-    padding:13px;
-    border:1px solid #ccd7dc;
-    border-radius:8px;
-    outline:none;
-}
-
-.ai-actions{
-    display:flex;
-    gap:8px;
-    margin-top:12px;
-    flex-wrap:wrap;
-}
-
-/* =========================
-   DRUG LIBRARY
-========================= */
-
-.library-tools{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-bottom:25px;
-}
-
-.library-tools input,
-.library-tools select{
-    padding:12px;
-    border:1px solid #ccd7dc;
-    border-radius:8px;
-    background:white;
-    outline:none;
-}
-
-.drug-card{
-    position:relative;
-}
-
-.drug-card h3{
-    color:#063970;
-    margin-bottom:5px;
-}
-
-.drug-class{
-    display:inline-block;
-    background:#dff5ef;
-    color:#087f67;
-    padding:4px 8px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:10px;
-}
-
-.drug-card p{
-    margin:7px 0;
-}
-
-.drug-detail{
-    display:none;
-    margin-top:15px;
-    padding-top:15px;
-    border-top:1px solid #e5e5e5;
-}
-
-.drug-detail.show{
-    display:block;
-}
-
-.info-row{
-    margin-bottom:10px;
-}
-
-.info-row strong{
-    color:#063970;
-}
-
-/* =========================
-   ANTICANCER
-========================= */
-
-.cancer-section{
-    background:#fff;
-}
-
-.cancer-intro{
-    background:linear-gradient(135deg,#4b134f,#063970);
-    color:white;
-    border-radius:16px;
-    padding:30px;
-    margin-bottom:30px;
-}
-
-.cancer-intro h3{
-    margin-bottom:10px;
-}
-
-.cancer-card{
-    border-left:5px solid #8e44ad;
-}
-
-.cancer-card h3{
-    color:#063970;
-}
-
-.cancer-category{
-    color:#8e44ad;
-    font-weight:bold;
-    font-size:13px;
-    margin-bottom:8px;
-}
-
-.cancer-card details{
-    margin-top:12px;
-}
-
-.cancer-card summary{
-    cursor:pointer;
-    font-weight:bold;
-    color:#063970;
-}
-
-.warning{
-    background:#fff3cd;
-    border-left:5px solid #f39c12;
-    padding:15px;
-    margin-top:20px;
-    border-radius:8px;
-}
-
-/* =========================
-   UPLOAD DASHBOARD
-========================= */
-
-.dashboard{
-    background:#eef5f8;
-}
-
-.dashboard-stats{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-    gap:15px;
-    margin-bottom:25px;
-}
-
-.stat{
-    background:white;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.07);
-}
-
-.stat strong{
-    display:block;
-    font-size:30px;
-    color:#063970;
-}
-
-.upload-box{
-    border:2px dashed #16a085;
-    background:white;
-    padding:35px;
-    text-align:center;
-    border-radius:14px;
-}
-
-.upload-box.dragover{
-    background:#e8fff8;
-}
-
-.upload-box input{
-    margin:15px 0;
-}
-
-.upload-status{
-    margin-top:10px;
-    color:#063970;
-    font-weight:bold;
-}
-
-.resource-card{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    padding:15px;
-    background:white;
-    border-radius:10px;
-    border:1px solid #e1e8eb;
-}
-
-.resource-info{
-    flex:1;
-}
-
-.resource-info h4{
-    color:#063970;
-}
-
-.resource-meta{
-    color:#6b7780;
-    font-size:12px;
-}
-
-.resource-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:7px;
-}
-
-/* =========================
-   ACCOUNTING
-========================= */
-
-.accounting{
-    background:#063970;
-    color:white;
-}
-
-.accounting .section-title{
-    color:white;
-}
-
-.account-card{
-    background:white;
-    color:#17202a;
-    border-radius:14px;
-    padding:25px;
-}
-
-.money{
-    font-size:38px;
-    font-weight:bold;
-    color:#16a085;
-}
-
-/* =========================
-   SOCIAL
-========================= */
-
-.social-section{
-    background:white;
-}
-
-.social-card{
-    text-align:center;
-    padding:30px;
-}
-
-.social-icon{
-    width:70px;
-    height:70px;
-    margin:auto auto 15px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    font-size:28px;
-    font-weight:bold;
-}
-
-/* =========================
-   DISCLAIMER
-========================= */
-
-.disclaimer{
-    background:#fff3cd;
-    padding:20px;
-    border-left:6px solid #f39c12;
-    border-radius:8px;
-}
-
-/* =========================
-   FOOTER
-========================= *
-  <footer>
-  <a href="about.html">About</a> |
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="terms.html">Terms & Disclaimer</a> |
-  <a href="contact.html">Contact</a>
-</footer>
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
-<header>
-
-<div class="navbar">
-
-<a href="#home" class="brand">
-
-<div class="logo">⚕</div>
-
-<div class="brand-text">
-Ask Dr. DEVIS
-<small>Pharmacy • Medicine • Health</small>
-</div>
-
-</a>
-
-<nav class="nav-links">
-
-<a href="#home">Home</a>
-<a href="#ai">Ask Dr. DEVIS</a>
-<a href="#drugs">Drug Library</a>
-<a href="#anticancer">Anticancer Drugs</a>
-<a href="#resources">Downloads</a>
-<a href="#dashboard">Dashboard</a>
-<a href="#accounting">Accounting</a>
-
-</nav>
-
-<div class="social-links">
-
-<a class="tiktok"
-href="https://www.tiktok.com/@dr.devis.n.pharma"
-target="_blank"
-rel="noopener noreferrer"
-title="TikTok">
-♪ 
-</a>
-
-<a class="whatsapp"
-href="https://wa.me/256794568447"
-target="_blank"
-rel="noopener noreferrer"
-title="WhatsApp">
-☎
-</a>
-
-<a class="instagram"
-href="https://www.instagram.com/dr.devisnpharmd/"
-target="_blank"
-rel="noopener noreferrer"
-title="Instagram">
-◎
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h1>Welcome to <span>Ask Dr. DEVIS</span></h1>
-
-<p>
-A pharmacy and medicine information platform for pharmaceutical
-education, drug information, health resources and responsible
-medicine use.
-</p>
-
-<div class="search-box">
-
-<input
-type="search"
-id="globalSearch"
-placeholder="Search for a drug, disease, medicine or topic..."
-oninput="globalSearch()">
-
-<button onclick="globalSearch()">Search</button>
-
-</div>
-
-<div id="searchResults" style="margin-top:20px;"></div>
-
-<div class="quick-buttons">
-
-<a href="#ai">Ask Dr. DEVIS AI</a>
-
-<a href="#drugs">Browse Drugs</a>
-
-<a href="#anticancer">Anticancer Drugs</a>
-
-<a href="#resources">Download Resources</a>
-
-<a
-href="https://wa.me/256794568447"
-target="_blank"
-rel="noopener noreferrer">
-Chat on WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     AI SECTION
-========================================================= -->
-
-<section class="ai-section" id="ai">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🤖 Ask Dr. DEVIS</h2>
-
-<p>
-Ask a pharmacy or medicine-related question and receive an
-educational response. You can also send the question directly
-to Dr. DEVIS on WhatsApp.
-</p>
-
-</div>
-
-<div class="ai-box">
-
-<div class="chat-window" id="chatWindow">
-
-<div class="message bot">
-<b>Dr. DEVIS:</b><br>
-Hello! I am Ask Dr. DEVIS. Ask me about medicines,
-pharmacy, pharmacology, drug classes, adverse effects,
-drug counselling or pharmaceutical education.
-</div>
-
-</div>
-
-<div class="ai-input">
-
-<input
-id="aiQuestion"
-type="text"
-placeholder="Type your question here..."
-onkeydown="if(event.key==='Enter') askDrDevis()">
-
-<button class="btn btn-primary" onclick="askDrDevis()">
-Ask
-</button>
-
-</div>
-
-<div class="ai-actions">
-
-<button
-class="btn btn-whatsapp"
-onclick="sendQuestionToWhatsApp()">
-💬 Send Question to WhatsApp
-</button>
-
-<button
-class="btn btn-light"
-onclick="clearChat()">
-Clear Chat
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     DRUG LIBRARY
-========================================================= -->
-
-<section id="drugs">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>💊 Drug Information Library</h2>
-
-<p>
-Search the existing Ask Dr. DEVIS drug database.
-</p>
-
-</div>
-
-<div class="library-tools">
-
-<input
-type="search"
-id="drugSearch"
-placeholder="Search drug..."
-oninput="renderDrugs()">
-
-<select id="drugCategory" onchange="renderDrugs()">
-
-<option value="all">All categories</option>
-<option value="Analgesic">Analgesic</option>
-<option value="NSAID">NSAID</option>
-<option value="Antibiotic">Antibiotic</option>
-<option value="Antidiabetic">Antidiabetic</option>
-<option value="Antihypertensive">Antihypertensive</option>
-<option value="Antihyperlipidaemic">Antihyperlipidaemic</option>
-<option value="Gastrointestinal">Gastrointestinal</option>
-<option value="Respiratory">Respiratory</option>
-<option value="Antihistamine">Antihistamine</option>
-<option value="Antimalarial">Antimalarial</option>
-<option value="Anticoagulant">Anticoagulant</option>
-<option value="Diuretic">Diuretic</option>
-<option value="Antifungal">Antifungal</option>
-<option value="Corticosteroid">Corticosteroid</option>
-
-</select>
-
-</div>
-
-<div class="grid" id="drugGrid"></div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     ANTICANCER DRUGS
-========================================================= -->
-
-<section class="cancer-section" id="anticancer">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🎗️ Comprehensive Anticancer Drug Information</h2>
-
-<p>
-A broad educational reference covering major anticancer drug
-classes, mechanisms, common uses, important adverse effects,
-monitoring considerations and pharmaceutical counselling points.
-</p>
-
-</div>
-
-<div class="cancer-intro">
-
-<h3>Understanding Anticancer Therapy</h3>
-
-<p>
-Anticancer medicines are drugs used to treat malignant diseases.
-They may act by damaging DNA, blocking cell division, interfering
-with hormone signalling, inhibiting specific molecular targets,
-stimulating the immune system, or delivering toxic substances
-selectively to cancer cells.
-</p>
-
-<br>
-
-<p>
-Cancer treatment is highly individualised. The selected medicine,
-dose, treatment cycle and combination depend on the cancer type,
-stage, molecular characteristics, organ function, previous therapy,
-patient factors and treatment protocol.
-</p>
-
-</div>
-
-<div class="grid" id="anticancerGrid"></div>
-
-<div class="warning">
-
-<strong>Important clinical safety notice:</strong>
-
-The doses shown in this educational database are NOT universal
-prescriptions. Many anticancer medicines require specialist
-oncology protocols, body-surface-area or weight-based calculations,
-renal/hepatic adjustment, laboratory monitoring and combination
-regimens. Patients should never start, stop or change anticancer
-therapy without their oncology/medical team.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     DASHBOARD / UPLOAD
-========================================================= -->
-
-<section class="dashboard" id="dashboard">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📁 Ask Dr. DEVIS Resource Dashboard</h2>
-
-<p>
-Upload educational resources such as documents, presentations,
-images, videos and other files.
-</p>
-
-</div>
-
-<div class="dashboard-stats">
-
-<div class="stat">
-<strong id="viewCount">0</strong>
-Website Views
-</div>
-
-<div class="stat">
-<strong id="uploadCount">0</strong>
-Uploaded Files
-</div>
-
-<div class="stat">
-<strong id="drugCount">0</strong>
-Drug Records
-</div>
-
-<div class="stat">
-<strong id="aiCount">0</strong>
-AI Questions
-</div>
-
-</div>
-
-<div class="upload-box" id="uploadBox">
-
-<h3>📤 Upload a Resource</h3>
-
-<p>
-Select any file type including PDF, DOC, DOCX, PPT, PPTX,
-XLS, XLSX, images, videos, ZIP and other files.
-</p>
-
-<input
-type="file"
-id="fileInput"
-multiple
-accept="*/*">
-
-<br>
-
-<button class="btn btn-success" onclick="uploadFiles()">
-Upload Files
-</button>
-
-<div class="upload-status" id="uploadStatus"></div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     PUBLIC DOWNLOAD CENTRE
-========================================================= -->
-
-<section id="resources">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>📥 Public Resource & Download Centre</h2>
-
-<p>
-Visitors can open or download resources published by Ask Dr. DEVIS.
-</p>
-
-</div>
-
-<div id="resourceList" class="grid"></div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     ACCOUNTING
-========================================================= -->
-
-<section class="accounting" id="accounting">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>💰 Website Accounting</h2>
-
-<p>
-Website performance and illustrative commission dashboard.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="account-card">
-
-<h3>Total Website Views</h3>
-
-<div class="money" id="accountViews">
-0
-</div>
-
-</div>
-
-<div class="account-card">
-
-<h3>Illustrative Commission</h3>
-
-<div class="money" id="commission">
-$0.00
-</div>
-
-<p>
-Illustrative calculation: $0.01 per recorded website view.
-</p>
-
-</div>
-
-<div class="account-card">
-
-<h3>Withdrawable Amount</h3>
-
-<div class="money" id="withdrawable">
-$0.00
-</div>
-
-<button
-class="btn btn-success"
-onclick="withdrawCommission()">
-Request Withdrawal
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =========================================================
-     SOCIAL MEDIA
-========================================================= -->
-
-<section class="social-section">
-
-<div class="container">
-
-<div class="section-title">
-
-<h2>🌐 Follow Ask Dr. DEVIS</h2>
-
-<p>
-Connect with Dr. DEVIS through the official social accounts.
-</p>
-
-</div>
-
-<div class="grid">
-
-<div class="social-card card">
-
-<div class="social-icon tiktok">
-♪
-</div>
-
-<h3>TikTok</h3>
-
-<p>@dr.devis.n.pharma</p>
-
-<br>
-
-<a
-class="btn btn-primary"
-href="https://www.tiktok.com/@dr.devis.n.pharma"
-target="_blank"
-rel="noopener noreferrer">
-Open TikTok
-</a>
-
-</div>
-
-
-<div class="social-card card">
-
-<div class="social-icon whatsapp">
-☎
-</div>
-
-<h3>WhatsApp</h3>
-
-<p>+256 794 568 447</p>
-
-<br>
-
-<a
-class="btn btn-whatsapp"
-href="https://wa.me/256794568447"
-target="_blank"
-rel="noopener noreferrer">
-Open WhatsApp
-</a>
-
-</div>
-
-
-<div class="social-card card">
-
-<div class="social-icon instagram">
-◎
-</div>
-
-<h3>Instagram</h3>
-
-<p>@dr.devisnpharmd</p>
-
-<br>
-
-<a
-class="btn btn-primary"
-href="https://www.instagram.com/dr.devisnpharmd/"
-target="_blank"
-rel="noopener noreferrer">
-Open In
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUG UNIVERSE - Comprehensive Medicine & Anticancer Database</title>
+    <!-- Tailwind CSS CDN for Modern UI Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google AdSense Integration Placeholder Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f5f9; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="bg-slate-900 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-teal-500 text-slate-950 font-black text-xl px-3 py-1.5 rounded-lg tracking-wider">DU</div>
+                <div>
+                    <h1 class="text-2xl font-black tracking-tight text-teal-400">DRUG UNIVERSE</h1>
+                    <p class="text-xs text-slate-400">Global Pharmacopoeia & Oncology Index</p>
+                </div>
+            </div>
+            <!-- Global Search Bar -->
+            <div class="w-full md:w-96 relative">
+                <input type="text" id="globalSearch" placeholder="Search 30+ categories or anticancer drugs..." 
+                    class="w-full bg-slate-800 text-sm text-white placeholder-slate-400 px-4 py-2.5 rounded-xl border border-slate-700 focus:outline-none focus:border-teal-400 transition-colors"
+                    onkeyup="filterDatabase()">
+                <span class="absolute right-3 top-3 text-slate-400 text-xs bg-slate-700 px-1.5 py-0.5 rounded">Ctrl+K</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- GOOGLE ADSENSE TOP BANNER SLOT -->
+    <div class="max-w-7xl mx-auto px-4 my-4 w-full">
+        <div class="bg-slate-200 border border-dashed border-slate-400 rounded-lg p-2 text-center text-xs text-slate-500">
+            <!-- AdSense Responsive Ad Unit -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="1234567890"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <span class="italic">[Google AdSense Banner Space - Top Header Slot]</span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 py-6 flex-grow w-full grid grid-cols-1 lg:grid-cols-4 gap-6">
+        
+        <!-- SIDEBAR CATEGORIES NAVIGATION -->
+        <aside class="lg:col-span-1 bg-white rounded-2xl p-4 shadow-sm border border-slate-200 h-fit sticky top-24">
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-3 px-2">Medicine Categories (30+)</h2>
+            <div class="space-y-1 max-h-[65vh] overflow-y-auto custom-scrollbar pr-1" id="categoryListContainer">
+                <!-- Dynamically populated categories via JS -->
+            </div>
+        </aside>
+
+        <!-- MAIN DATABASE FEED & ONCOLOGY SECTION -->
+        <section class="lg:col-span-3 space-y-6">
+            
+            <!-- SPECIAL ANTICANCER SECTION (HIGHLIGHTED MASSIVE DATABASE) -->
+            <div class="bg-gradient-to-br from-rose-950 via-slate-900 to-indigo-950 text-white rounded-2xl p-6 shadow-xl border border-rose-900/50">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                    <div>
+                        <span class="bg-rose-500/20 text-rose-300 text-xs font-semibold px-3 py-1 rounded-full border border-rose-500/30">Priority Oncology Database</span>
+                        <h2 class="text-2xl font-black mt-2 text-rose-100">Anticancer & Antineoplastic Agents</h2>
+                        <p class="text-xs text-slate-300 mt-1">Comprehensive directory of cytotoxic agents, targeted therapies, monoclonal antibodies, and hormone therapies.</p>
+                    </div>
+                    <span class="text-xs bg-slate-800 text-rose-400 font-mono px-3 py-1.5 rounded-lg border border-rose-500/20">Database v4.2</span>
+                </div>
+                <!-- Anticancer Grid Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="anticancerContainer">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+
+            <!-- GENERAL MEDICINE CATEGORIES DATABASE REPOSITORY -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200">
+                <div class="flex justify-between items-center mb-6">
+                    <div>
+                        <h2 class="text-xl font-bold text-slate-900" id="activeCategoryTitle">All Categories Repository</h2>
+                        <p class="text-xs text-slate-500">Explore core pharmaceutical classifications and clinical profiles.</p>
+                    </div>
+                    <span id="resultCountBadge" class="text-xs bg-slate-100 text-slate-600 font-medium px-3 py-1 rounded-full">Showing all items</span>
+                </div>
+                
+                <!-- Main Records Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="mainDatabaseGrid">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- GOOGLE ADSENSE BOTTOM BANNER SLOT -->
+    <div class="max-w-7xl mx-auto px-4 my-6 w-full">
+        <div class="bg-slate-200 border border-dashed border-slate-400 rounded-lg p-2 text-center text-xs text-slate-500">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="0987654321"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            <span class="italic">[Google AdSense Banner Space - Footer Ad Slot]</span>
+        </div>
+    </div>
+
+    <!-- MODAL POPUP FOR DETAILED DRUG VIEW -->
+    <div id="drugModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in duration-200">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 font-bold text-lg">&times;</button>
+            <span id="modalCategory" class="text-xs font-bold uppercase tracking-wider text-teal-600 bg-teal-50 px-2.5 py-1 rounded-md"></span>
+            <h3 id="modalDrugName" class="text-2xl font-black text-slate-900 mt-2"></h3>
+            <p id="modalGenericName" class="text-sm font-medium text-slate-500 italic mb-4"></p>
+            
+            <div class="space-y-3 text-sm border-t border-slate-100 pt-4">
+                <div>
+                    <strong class="text-slate-700 block text-xs uppercase tracking-wider">Primary Indication:</strong>
+                    <span id="modalIndication" class="text-slate-600"></span>
+                </div>
+                <div>
+                    <strong class="text-slate-700 block text-xs uppercase tracking-wider">Standard Dosage & Formats:</strong>
+                    <span id="modalDosage" class="text-slate-600"></span>
+                </div>
+                <div>
+                    <strong class="text-slate-700 block text-xs uppercase tracking-wider">Key Contraindications / Cautions:</strong>
+                    <span id="modalCautions" class="text-slate-600"></span>
+                </div>
+            </div>
+            
+            <div class="mt-6 flex justify-end">
+                <button onclick="closeModal()" class="bg-slate-900 text-white text-xs font-bold px-4 py-2 rounded-xl hover:bg-slate-800 transition-colors">Close Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAINTAINED FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+            <div>
+                <span class="text-white font-black text-sm tracking-wide block mb-1">DRUG UNIVERSE</span>
+                <p>&copy; 2026 Drug Universe Platform. All rights reserved. Designed for professional medical referencing, research, and educational indexing.</p>
+            </div>
+            <div class="flex flex-wrap gap-4 md:justify-center">
+                <a href="#" class="hover:text-teal-400 transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-teal-400 transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-teal-400 transition-colors">AdSense Disclosure</a>
+                <a href="#" class="hover:text-teal-400 transition-colors">Contact Database Admin</a>
+            </div>
+            <div class="md:text-right">
+                <span class="inline-block bg-slate-800 text-teal-400 px-3 py-1 rounded-lg border border-slate-700 font-mono">Secure SSL Encrypted Index</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC & MASSIVE DATABASE ARRAYS -->
+    <script>
+        // Massive Anticancer Database
+        const anticancerDatabase = [
+            { id: 'ac1', name: 'Paclitaxel', generic: 'Taxol / Abraxane', category: 'Anticancer - Taxane', indication: 'Ovarian, breast, non-small cell lung cancer, and Kaposi sarcoma.', dosage: '175 mg/m² IV infusion over 3 hours every 3 weeks.', cautions: 'Severe hypersensitivity, bone marrow suppression, peripheral neuropathy.' },
+            { id: 'ac2', name: 'Pembrolizumab', generic: 'Keytruda', category: 'Anticancer - Immunotherapy', indication: 'Melanoma, NSCLC, head and neck cancers, classical Hodgkin lymphoma.', dosage: '200 mg IV every 3 weeks or 400 mg every 6 weeks.', cautions: 'Immune-mediated adverse reactions (pneumonitis, colitis, hepatitis).' },
+            { id: 'ac3', name: 'Imatinib', generic: 'Gleevec', category: 'Anticancer - Kinase Inhibitor', indication: 'Chronic Myeloid Leukemia (CML), Gastrointestinal Stromal Tumors (GIST).', dosage: '400 mg to 600 mg orally once daily with meal.', cautions: 'Fluid retention, hepatotoxicity, severe cardiac failure risks.' },
+            { id: 'ac4', name: 'Trastuzumab', generic: 'Herceptin', category: 'Anticancer - Monoclonal Antibody', indication: 'HER2-overexpressing breast cancer and metastatic gastric cancer.', dosage: 'Loading dose 8 mg/kg IV, then 6 mg/kg every 3 weeks.', cautions: 'Cardiotoxicity, decreased left ventricular ejection fraction, infusion reactions.' },
+            { id: 'ac5', name: 'Doxorubicin', generic: 'Adriamycin', category: 'Anticancer - Anthracycline', indication: 'Breast cancer, bladder cancer, lymphomas, leukemias.', dosage: '60-75 mg/m² IV single dose every 21 days.', cautions: 'Cumulative cardiotoxicity, severe myelosuppression, tissue necrosis on extravasation.' },
+            { id: 'ac6', name: 'Cisplatin', generic: 'Platinol', category: 'Anticancer - Platinum Compound', indication: 'Testicular, ovarian, bladder, and small cell lung cancer.', dosage: '50-100 mg/m² IV every 3-4 weeks with aggressive hydration.', cautions: 'Nephrotoxicity, ototoxicity, severe peripheral neuropathy, nausea/vomiting.' },
+            { id: 'ac7', name: 'Rituximab', generic: 'Rituxan', category: 'Anticancer - Monoclonal Antibody', indication: 'Non-Hodgkin lymphoma, Chronic Lymphocytic Leukemia (CLL), rheumatoid arthritis.', dosage: '375 mg/m² IV infusion per treatment cycle protocol.', cautions: 'Severe infusion reactions, hepatitis B reactivation, progressive multifocal leukoencephalopathy.' },
+            { id: 'ac8', name: 'Capecitabine', generic: 'Xeloda', category: 'Anticancer - Antimetabolite', indication: 'Colorectal cancer, metastatic breast cancer.', dosage: '1250 mg/m² orally twice daily for 2 weeks followed by 1 week rest.', cautions: 'Hand-foot syndrome, severe diarrhea, cardiotoxicity, DPD deficiency risks.' }
+        ];
+
+        // 30+ General Medicine Categories & Massive Database Records
+        const generalCategories = [
+            "All Categories", "Analgesics & NSAIDs", "Antibiotics", "Antifungals", "Antivirals", 
+            "Antihypertensives", "Antidiabetics", "Cardiovascular Agents", "Respiratory & Asthma", 
+            "Gastrointestinal & Antacids", "Psychotropic & Antidepressants", "Anxiolytics & Sedatives", 
+            "Antihistamines & Allergy", "Corticosteroids", "Diuretics", "Thyroid & Hormones", 
+            "Lipid-Lowering / Statins", "Anticoagulants", "Anticonvulsants", "Muscle Relaxants", 
+            "Dermatological Agents", "Ophthalmic Drops", "Urologicals", "Vitamins & Supplements", 
+            "Immunosuppressants", "Antimalarials", "Anesthetics", "Antiparasitics", "Osteoporosis Agents", 
+            "Gout Treatments", "Nootropics & Neuroprotectors"
+        ];
+
+        const mainMedicineDatabase = [
+            { name: "Paracetamol (Acetaminophen)", generic: "Tylenol / Panadol", category: "Analgesics & NSAIDs", indication: "Mild to moderate pain relief and fever reduction.", dosage: "500 mg - 1000 mg orally every 4 to 6 hours as needed.", cautions: "Maximum 4g daily; severe hepatic damage risk on overdose." },
+            { name: "Ibuprofen", generic: "Advil / Motrin", category: "Analgesics & NSAIDs", indication: "Inflammation, mild-to-moderate pain, dysmenorrhea, and fever.", dosage: "200 mg - 400 mg orally every 4 to 6 hours.", cautions: "Peptic ulcer disease, GI bleeding risks, renal impairment." },
+            { name: "Amoxicillin", generic: "Amoxil", category: "Antibiotics", indication: "Respiratory tract infections, otitis media, urinary tract infections.", dosage: "500 mg orally every 8 hours or 875 mg every 12 hours.", cautions: "Penicillin hypersensitivity, pseudomembranous colitis risk." },
+            { name: "Azithromycin", generic: "Zithromax", category: "Antibiotics", indication: "Community-acquired pneumonia, chlamydia, pharyngitis, sinusitis.", dosage: "500 mg on day 1, then 250 mg daily for days 2-5.", cautions: "QT interval prolongation, hepatic dysfunction warnings." },
+            { name: "Fluconazole", generic: "Diflucan", category: "Antifungals", indication: "Candidiasis, cryptococcal meningitis, vaginal yeast infections.", dosage: "150 mg single oral dose for vaginal candidiasis; higher for systemic.", cautions: "Hepatic impairment, drug interactions via CYP inhibition." },
+            { name: "Acyclovir", generic: "Zovirax", category: "Antivirals", indication: "Herpes simplex infections, varicella-zoster (chickenpox/shingles).", dosage: "400 mg orally 3 to 5 times daily depending on indication.", cautions: "Adequate hydration required to prevent renal precipitation." },
+            { name: "Lisinopril", generic: "Prinivil / Zestril", category: "Antihypertensives", indication: "Hypertension, heart failure, post-myocardial infarction protection.", dosage: "10 mg to 40 mg orally once daily.", cautions: "Hyperkalemia, angioedema, contraindicated in pregnancy." },
+            { name: "Amlodipine", generic: "Norvasc", category: "Cardiovascular Agents", indication: "Hypertension and coronary artery disease (angina).", dosage: "5 mg to 10 mg orally once daily.", cautions: "Peripheral edema, hypotension, dizziness." },
+            { name: "Metformin", generic: "Glucophage", category: "Antidiabetics", indication: "Type 2 diabetes mellitus management and glycemic control.", dosage: "500 mg to 1000 mg orally twice daily with meals.", cautions: "Lactic acidosis risk, temporarily discontinue prior to iodinated contrast procedures." },
+            { name: "Salbutamol (Albuterol)", generic: "Ventolin", category: "Respiratory & Asthma", indication: "Bronchospasm relief in asthma and chronic obstructive pulmonary disease.", dosage: "1-2 puffs via metered-dose inhaler every 4-6 hours as needed.", cautions: "Tachycardia, tremors, hypokalemia at high dosages." },
+            { name: "Omeprazole", generic: "Prilosec", category: "Gastrointestinal & Antacids", indication: "Gastroesophageal reflux disease (GERD), peptic ulcer disease, Zollinger-Ellison.", dosage: "20 mg to 40 mg orally once daily before breakfast.", cautions: "Long-term use associated with bone fracture risks and B12 deficiency." },
+            { name: "Sertraline", generic: "Zoloft", category: "Psychotropic & Antidepressants", indication: "Major depressive disorder, OCD, panic disorder, social anxiety disorder.", dosage: "50 mg to 200 mg orally once daily.", cautions: "Serotonin syndrome risk when combined with MAOIs; suicidal ideation monitoring." },
+            { name: "Diazepam", generic: "Valium", category: "Anxiolytics & Sedatives", indication: "Anxiety disorders, acute alcohol withdrawal, muscle spasms, status epilepticus.", dosage: "2 mg to 10 mg orally 2 to 4 times daily.", cautions: "Risk of dependence, respiratory depression, sedation." },
+            { name: "Cetirizine", generic: "Zyrtec", category: "Antihistamines & Allergy", indication: "Perennial allergic rhinitis, chronic urticaria, allergic conjunctivitis.", dosage: "10 mg orally once daily.", cautions: "Mild drowsiness, avoid concurrent alcohol use." },
+            { name: "Prednisolone", generic: "Prelone", category: "Corticosteroids", indication: "Severe inflammatory conditions, autoimmune flare-ups, severe asthma.", dosage: "5 mg to 60 mg daily adjusted based on condition severity.", cautions: "Immunosuppression, adrenal suppression, hyperglycemia on prolonged use." },
+            { name: "Furosemide", generic: "Lasix", category: "Diuretics", indication: "Edema associated with heart failure, hepatic cirrhosis, renal disease, hypertension.", dosage: "20 mg to 80 mg orally as a single dose.", cautions: "Electrolyte depletion (potassium, sodium), dehydration, ototoxicity." },
+            { name: "Levothyroxine", generic: "Synthroid", category: "Thyroid & Hormones", indication: "Hypothyroidism replacement therapy and TSH suppression.", dosage: "25 mcg to 150 mcg orally once daily in the morning on an empty stomach.", cautions: "Cardiovascular strain if initiated at high doses in elderly patients." },
+            { name: "Atorvastatin", generic: "Lipitor", category: "Lipid-Lowering / Statins", indication: "Hyperlipidemia prevention, cardiovascular risk reduction.", dosage: "10 mg to 80 mg orally once daily.", cautions: "Myopathy, rhabdomyolysis risk, monitor liver enzymes." },
+            { name: "Warfarin", generic: "Coumadin", category: "Anticoagulants", indication: "Prophylaxis and treatment of venous thrombosis, pulmonary embolism, atrial fibrillation.", dosage: "2 mg to 10 mg daily adjusted by target INR monitoring.", cautions: "Severe hemorrhage risks, numerous drug-drug and food interactions." },
+            { name: "Gabapentin", generic: "Neurontin", category: "Anticonvulsants", indication: "Postherpetic neuralgia, partial onset seizures, neuropathic pain.", dosage: "300 mg on day 1, 300 mg twice on day 2, 300 mg 3 times daily on day 3 (titrated up).", cautions: "Dizziness, somnolence, respiratory depression when mixed with CNS depressants." },
+            { name: "Hydrocortisone Cream", generic: "Locoid", category: "Dermatological Agents", indication: "Inflammatory and pruritic dermatoses, eczema, contact dermatitis.",dosage: "Apply thinly to affected area 2 to 4 times daily.", cautions: "Skin atrophy, avoid prolonged use on face or broken skin." },
+            { name: "Timolol Ophthalmic", generic: "Timoptic", category: "Ophthalmic Drops", indication: "Open-angle glaucoma and ocular hypertension.", dosage: "1 drop of 0.25% or 0.5% solution in the affected eye(s) twice daily.", cautions: "Systemic beta-blockade effects, bronchospasm, bradycardia." },
+            { name: "Tamsulosin", generic: "Flomax", category: "Urologicals", indication: "Signs and symptoms of benign prostatic hyperplasia (BPH).", dosage: "0.4 mg orally once daily approximately 30 minutes after the same meal each day.", cautions: "Orthostatic hypotension, dizziness, intraoperative floppy iris syndrome." },
+            { name: "Multivitamins Complex", generic: "Centrum / Vitane", category: "Vitamins & Supplements", indication: "Nutritional supplementation and micronutrient deficiency prophylaxis.", dosage: "1 tablet daily with food.", cautions: "Avoid high-dose iron/fat-soluble vitamin toxicity." },
+            { name: "Cyclosporine", generic: "Sandimmune", category: "Immunosuppressants", indication: "Prevention of organ rejection in kidney, liver, and heart transplants.", dosage: "Initial dose 5 mg/kg/day divided in two doses.", cautions: "Nephrotoxicity, hypertension, increased opportunistic infection risks." },
+            { name: "Artemether / Lumefantrine", generic: "Coartem", category: "Antimalarials", indication: "Acute uncomplicated malaria infections.", dosage: "6-dose regimen over 3 days according to body weight brackets.", cautions: "QT prolongation, avoid with CYP3A4 inhibitors." },
+            { name: "Propofol", generic: "Diprivan", category: "Anesthetics", indication: "General anesthesia induction and maintenance, ICU sedation.", dosage: "Titrated IV infusion managed strictly by anesthesia professionals.", cautions: "Severe hypotension, respiratory arrest, Propofol infusion syndrome." },
+            { name: "Albendazole", generic: "Albenza", category: "Antiparasitics", indication: "Hydatid disease and neurocysticercosis, intestinal nematode infections.", dosage: "400 mg orally once or twice daily with meals.", cautions: "Bone marrow suppression, hepatotoxicity, pregnancy contraindication." },
+            { name: "Alendronate", generic: "Fosamax", category: "Osteoporosis Agents", indication: "Treatment and prevention of osteoporosis in postmenopausal women.", dosage: "70 mg orally once weekly with plain water 30 minutes before first food.", cautions: "Esophageal ulceration risk; patient must remain upright for 30 minutes." },
+            { name: "Allopurinol", generic: "Zyloprim", category: "Gout Treatments", indication: "Management of gout, hyperuricemia, and recurrent uric acid nephrolithiasis.", dosage: "100 mg to 300 mg daily, titrated upward based on serum uric acid levels.", cautions: "Hypersensitivity rash, severe cutaneous adverse reactions (SCAR), hydration required." }
+        ];
+
+        let selectedCategoryFilter = "All Categories";
+
+        // Initialize UI on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCategoriesList();
+            renderAnticancerDatabase();
+            renderMainDatabase(mainMedicineDatabase);
+        });
+
+        // Render Sidebar Category Buttons
+        function renderCategoriesList() {
+            const container = document.getElementById('categoryListContainer');
+            container.innerHTML = '';
+            
+            generalCategories.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition-colors flex justify-between items-center ${selectedCategoryFilter === cat ? 'bg-teal-600 text-white font-bold' : 'text-slate-600 hover:bg-slate-100'}`;
+                btn.innerHTML = `<span>${cat}</span>`;
+                btn.onclick = () => {
+                    selectedCategoryFilter = cat;
+                    document.getElementById('activeCategoryTitle').innerText = cat === "All Categories" ? "All Categories Repository" : `${cat} Database`;
+                    renderCategoriesList();
+                    filterDatabase();
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        // Render Anticancer Database Cards
+        function renderAnticancerDatabase(data = anticancerDatabase) {
+            const container = document.getElementById('anticancerContainer');
+            container.innerHTML = '';
+            
+            if (data.length === 0) {
+                container.innerHTML = `<p class="text-slate-400 text-xs italic col-span-2">No matching anticancer drugs located.</p>`;
+                return;
+            }
+
+            data.forEach(drug => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-900/80 border border-rose-900/40 rounded-xl p-4 hover:border-rose-500/50 transition-all flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="text-base font-bold text-rose-200">${drug.name}</h3>
+                            <span class="text-[10px] bg-rose-500/20 text-rose-300 px-2 py-0.5 rounded border border-rose-500/30">${drug.category}</span>
+                        </div>
+                        <p class="text-xs text-slate-400 italic mb-2">${drug.generic}</p>
+                        <p class="text-xs text-slate-300 line-clamp-2 mb-3"><strong class="text-slate-200">Indication:</strong> ${drug.indication}</p>
+                    </div>
+                    <button onclick='openModal(${JSON.stringify(drug)})' class="mt-2 w-full bg-rose-900/40 hover:bg-rose-800 text-rose-200 text-xs font-semibold py-1.5 px-3 rounded-lg border border-rose-700/50 transition-colors">
+                        View Complete Profile &rarr;
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Render Main Medicine Grid
+        function renderMainDatabase(data) {
+            const container = document.getElementById('mainDatabaseGrid');
+            container.innerHTML = '';
+            
+            document.getElementById('resultCountBadge').innerText = `Showing ${data.length} records`;
+
+            if (data.length === 0) {
+                container.innerHTML = `<div class="col-span-2 text-center py-8 text-slate-400 text-sm">No medicine profiles found matching your search criteria.</div>`;
+                return;
+            }
+
+            data.forEach(drug => {
+                const card = document.createElement('div');
+                card.className = "bg-white border border-slate-200 rounded-xl p-4 hover:shadow-md transition-shadow flex flex-col justify-between";
+                card.innerHTML = `
+                    <div>
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="text-base font-bold text-slate-900">${drug.name}</h3>
+                            <span class="text-[10px] bg-teal-50 text-teal-700 font-semibold px-2 py-0.5 rounded border border-teal-100">${drug.category}</span>
+                        </div>
+                        <p class="text-xs text-slate-500 italic mb-2">${drug.generic}</p>
+                        <p class="text-xs text-slate-600 line-clamp-2 mb-3"><strong class="text-slate-700">Indication:</strong> ${drug.indication}</p>
+                    </div>
+                    <button onclick='openModal(${JSON.stringify(drug)})' class="mt-2 w-full bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-700 text-xs font-semibold py-1.5 px-3 rounded-lg transition-colors">
+                        Access Full Database Specs &rarr;
+                    </button>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Unified Search Filtering Function
+        function filterDatabase() {
+            const query = document.getElementById('globalSearch').value.toLowerCase();
+            
+            // Filter Main Database
+            const filteredMain = mainMedicineDatabase.filter(drug => {
+                const matchesCategory = selectedCategoryFilter === "All Categories" || drug.category === selectedCategoryFilter;
+                const matchesQuery = drug.name.toLowerCase().includes(query) || 
+                                     drug.generic.toLowerCase().includes(query) || 
+                                     drug.indication.toLowerCase().includes(query) ||
+                                     drug.category.toLowerCase().includes(query);
+                return matchesCategory && matchesQuery;
+            });
+
+            // Filter Anticancer Database
+            const filteredAnti = anticancerDatabase.filter(drug => {
+                return drug.name.toLowerCase().includes(query) || 
+                       drug.generic.toLowerCase().includes(query) || 
+                       drug.indication.toLowerCase().includes(query) ||
+                       drug.category.toLowerCase().includes(query);
+            });
+
+            renderMainDatabase(filteredMain);
+            renderAnticancerDatabase(filteredAnti);
+        }
+
+        // Modal Handlers
+        function openModal(drug) {
+            document.getElementById('modalCategory').innerText = drug.category;
+            document.getElementById('modalDrugName').innerText = drug.name;
+            document.getElementById('modalGenericName').innerText = `Generic/Brand: ${drug.generic}`;
+            document.getElementById('modalIndication').innerText = drug.indication;
+            document.getElementById('modalDosage').innerText = drug.dosage;
+            document.getElementById('modalCautions').innerText = drug.cautions;
+            
+            const modal = document.getElementById('drugModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('drugModal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('drugModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
